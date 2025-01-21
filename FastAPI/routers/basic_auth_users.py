@@ -10,7 +10,9 @@ from fastapi.security import OAuth2PasswordBearer,OAuth2PasswordRequestForm
 # OAuth2PasswordRequestForm, para capturar ususario y contraseña
 
 
-router = APIRouter()
+router = APIRouter(prefix="/basic_auth", # prefix indicamos que usando solo "/" se refiere a prodcuts  
+                    tags=["basic_auth"], # tags te agrupa para ver mejor la infomración en swagger
+                    responses={status.HTTP_404_NOT_FOUND: {"message": "No encontrado"}})
 
 oauth2 = OAuth2PasswordBearer(tokenUrl="login")
 
