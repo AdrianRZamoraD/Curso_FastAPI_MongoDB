@@ -18,15 +18,15 @@ class User(BaseModel):
     age: int
 
 users_list = [User(id=1,name="Adrian",surname="Zamora", url="https://adrian.zam", age=31), 
-              User(id=2,name="ñonga", surname="la suya", url="https://ñonga.las", age=25),
-              User(id=3,name="ñon", surname="ga",url="https://ñon.ga", age=39 )]
+              User(id=2,name="Ricardo", surname="Delgado", url="https://Ricardo.ric", age=25),
+              User(id=3,name="Ashure", surname="Galact",url="https://Ashure.ash", age=39 )]
 
 
 @router.get("/usersjson") # get = obtención de información de páginas establecidas reales
 async def usersjson(): # Creamo un json a mano
     return [{"name":"Adrian", "surname":"Zamora", "url":"https://adrian.zam", "age":31},
-            {"name":"ñonga", "surname":"la suya", "url":"https://ñonga.las", "age":25},
-            {"name":"ñon", "surname":"ga", "url":"https://ñon.ga", "age":39}]
+            {"name":"Ricardo", "surname":"Delgado", "url":"https://Ricardo.ric", "age":25},
+            {"name":"Ashure", "surname":"Galact", "url":"https://Ashure.ash", "age":39}]
 
 @router.get("/users")
 async def users():
