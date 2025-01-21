@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-router = APIRouter(prefix="/products", # prefix indicamos que usando solo "/" se refiere a prodcuts  
-                    tags=["products"], # tags te agrupa para ver mejor la infomración en swagger
+router = APIRouter(prefix="/products",  
+                    tags=["products"], 
                     responses={404: {"message": "No encontrado"}})
 
 # uvicorn products:app --reload

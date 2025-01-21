@@ -8,8 +8,8 @@ from db.schemas.user import user_schema, users_schema
 from db.client import db_client
 from bson import ObjectId
 
-router = APIRouter(prefix="/userdb", # prefix indicamos que usando solo "/" se refiere a prodcuts  
-                    tags=["userdb"], # tags te agrupa para ver mejor la infomración en swagger
+router = APIRouter(prefix="/userdb", 
+                    tags=["userdb"], 
                     responses={status.HTTP_404_NOT_FOUND: {"message": "No encontrado"}})
 
 # inicia el server: uvicorn users:app --reload 

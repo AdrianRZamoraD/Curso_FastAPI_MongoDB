@@ -15,8 +15,8 @@ ACCESS_TOKEN_DURATION = 1
 
 SECRET = "bb9b71d3588be0933ca1d8346fe4bbe51691d9ab90dd44e9846d223bc726b52b"
 
-router = APIRouter(prefix="/jwt_auth", # prefix indicamos que usando solo "/" se refiere a prodcuts  
-                    tags=["jwt_auth"], # tags te agrupa para ver mejor la infomración en swagger
+router = APIRouter(prefix="/jwt_auth",  
+                    tags=["jwt_auth"], 
                     responses={404: {"message": "No encontrado"}})
 
 oauth2 = OAuth2PasswordBearer(tokenUrl="login")
