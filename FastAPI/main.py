@@ -39,6 +39,8 @@ async def root():
 async def url():
     return {"url":"https://AdrianRZD.com/python"}
 
+# CursoFastAPI1 = alias de URL remota de git@github.com:AdrianRZamoraD/Curso_FastAPI_MongoDB.git
+
 # inicia el server: uvicorn main:app --reload
 # Detener el server: CTLR + C
 
