@@ -23,7 +23,7 @@ users_list = [User(id=1,name="Adrian",surname="Zamora", url="https://adrian.zam"
 
 
 @router.get("/usersjson") # get = obtención de información de páginas establecidas reales
-async def usersjson(): # Creamo un json a mano
+async def usersjson(): # Creamos un json a mano
     return [{"name":"Adrian", "surname":"Zamora", "url":"https://adrian.zam", "age":31},
             {"name":"Ricardo", "surname":"Delgado", "url":"https://Ricardo.ric", "age":25},
             {"name":"Ashure", "surname":"Galact", "url":"https://Ashure.ash", "age":39}]
